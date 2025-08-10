@@ -1,0 +1,43 @@
+.header {
+  background-image: url("/images/frame-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.titleBox {
+  position: relative;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(6rem, 18vw, 16rem);
+  font-family: var(--font-seconday);
+  line-height: 1;
+  letter-spacing: 0.3rem;
+  color: var(--violet-dark);
+  text-shadow: -2px -2px 0 var(--yellow-light), 2px -2px 0 var(--yellow-light),
+    -2px 2px 0 var(--yellow-light), 2px 2px 0 var(--yellow-light);
+}
+.mountainImg {
+  position: absolute;
+  width: 50%;
+  top: -26%;
+  left: -6%;
+}
+
+.deerImg {
+  position: absolute;
+  width: 24%;
+  top: -14%;
+  right: -6%;
+}

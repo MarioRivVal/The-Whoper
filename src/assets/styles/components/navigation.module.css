@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 1rem;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon svg {
+  width: 4rem;
+  height: 4rem;
+}
