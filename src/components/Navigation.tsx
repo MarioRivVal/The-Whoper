@@ -5,10 +5,10 @@ import MenuIcon from "../assets/icons/Menu";
 export default function Navigation() {
   const [isNavActive, setIsNavActive] = useState(false);
 
-  const handleSmoothScrolling = (e) => {
-    // smoothScrolling(e);
-    setIsNavActive(false);
-  };
+  // const handleSmoothScrolling = (e) => {
+  //   // smoothScrolling(e);
+  //   setIsNavActive(false);
+  // };
 
   const handleCheckboxChange = () => {
     setIsNavActive(!isNavActive);
