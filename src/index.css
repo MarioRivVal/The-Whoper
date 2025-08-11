@@ -5,6 +5,8 @@
   --font-seconday: "Slackey", sans-serif;
   --font-tertiary: "Bagel Fat One", system-ui;
 
+  --bg-img: url("/images/background.png");
+
   --black: #232323;
   --white: #fbf7f0;
   --cream: #f5eada
@@ -47,3 +49,24 @@ a {
   display: inline-block;
   text-decoration: none;
 }
+
+@media (min-width: 480px) { /* sm: móviles grandes */ }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 68.75%; /* ≈11px */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 75%; /* 12px */
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
+}
+

@@ -1,0 +1,11 @@
+.main {
+  position: relative;
+  height: 80rem;
+  background-image: var(--bg-img);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-color: var(--orange-light);
+  background-position: 20% 80%;
+  margin-top: -8rem;
+  z-index: -1;
+}

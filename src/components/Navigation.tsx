@@ -15,7 +15,9 @@ export default function Navigation() {
   };
 
   return (
-    <div className={`navigation ${isNavActive ? "navigation-active" : ""}`}>
+    <div
+      className={`${s.navigation} ${isNavActive ? "navigation-active" : ""}`}
+    >
       <div className={s.icon} onClick={handleCheckboxChange}>
         <MenuIcon />
       </div>
