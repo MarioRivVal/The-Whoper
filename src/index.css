@@ -22,6 +22,11 @@
 
   --orange-light: #ff8459;
   --red-dark: #a63820;
+
+/* test */
+  --bg: #7c3a97;          /* morado */
+  --ink: #18181b;         /* casi negro */
+  --paper: #fff3e9; 
 }
 
 *,
@@ -49,6 +54,8 @@ a {
   display: inline-block;
   text-decoration: none;
 }
+
+
 
 @media (min-width: 480px) { /* sm: móviles grandes */ }
 

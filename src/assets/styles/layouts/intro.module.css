@@ -1,11 +1,41 @@
 .main {
   position: relative;
-  height: 80rem;
+  height: 120rem;
   background-image: var(--bg-img);
   /* background-size: cover; */
   background-repeat: no-repeat;
   background-color: var(--orange-light);
   background-position: 20% 80%;
-  margin-top: -8rem;
+  margin-top: 0;
   z-index: -1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+}
+.title1 {
+  display: contents;
+}
+
+.t {
+  font-size: clamp(4rem, 5vw, 6rem);
+}
+
+.t1 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+.t2 {
+}
+.t3 {
+}
+.t4 {
+}
+.t5 {
+}
+.t6 {
+}
+.t7 {
 }
