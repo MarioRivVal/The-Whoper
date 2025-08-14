@@ -9,7 +9,7 @@
 
   --black: #232323;
   --white: #fbf7f0;
-  --cream: #f5eada
+  --cream: #f5eada;
 
   --violet-light: #9c53a2;
   --violet-dark: #525281;
@@ -22,11 +22,6 @@
 
   --orange-light: #ff8459;
   --red-dark: #a63820;
-
-/* test */
-  --bg: #7c3a97;          /* morado */
-  --ink: #18181b;         /* casi negro */
-  --paper: #fff3e9; 
 }
 
 *,
@@ -55,9 +50,9 @@ a {
   text-decoration: none;
 }
 
-
-
-@media (min-width: 480px) { /* sm: móviles grandes */ }
+@media (min-width: 480px) {
+  /* sm: móviles grandes */
+}
 
 @media (min-width: 768px) {
   html {
@@ -76,4 +71,3 @@ a {
     font-size: 80%;
   }
 }
-

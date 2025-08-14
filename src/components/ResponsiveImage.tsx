@@ -7,6 +7,7 @@ export default function ResponsiveImage({
   alt,
   className,
 }: Image) {
+  console.log(className);
   return (
     <picture className={`${s.imgBox} ${className}`}>
       <source srcSet={`/images/${name}.webp`} type="image/webp" />
