@@ -1,17 +1,18 @@
 .main {
+  max-width: 180rem;
+  margin: 0 auto;
   position: relative;
-  padding: 8rem 2rem;
+  padding: 12rem 2rem;
   background-image: var(--bg-img);
   /* background-size: cover; */
   background-repeat: no-repeat;
   background-color: var(--violet-light);
   background-position: 20% 80%;
-  margin-top: -6rem;
+  margin-top: -8rem;
   z-index: -1;
 }
 
 .grid {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(15, min-content);
@@ -26,20 +27,22 @@
   color: var(--white);
   letter-spacing: 0.2rem;
   font-weight: 100;
-  font-size: clamp(5rem, 8vw, 11rem);
+  font-size: clamp(5rem, 14vw, 11rem);
 }
 
 .t {
-  font-size: clamp(3.5rem, 8vw, 11rem);
+  font-size: clamp(3.5rem, 9vw, 11rem);
 }
 
 .t1 {
   grid-column: 1/-1;
   grid-row: 3/4;
+  margin-left: 2%;
 }
 .t2 {
   grid-column: 1/-1;
   grid-row: 4/5;
+  margin-left: 6%;
 }
 .t3 {
   grid-column: 1/-1;
@@ -58,10 +61,12 @@
 .t6 {
   grid-column: 1/3;
   grid-row: 9/10;
+  margin-left: 16%;
 }
 .t7 {
   grid-column: 1/3;
   grid-row: 10/11;
+  margin-left: 26%;
 }
 .t8 {
   grid-column: 3/-1;
@@ -72,9 +77,6 @@
   grid-column: 3/-1;
   grid-row: 12/13;
   text-align: end;
-}
-
-.art {
 }
 
 .art1 {
@@ -91,4 +93,84 @@
 .art3 {
   grid-column: 1/3;
   grid-row: 11/14;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    max-width: 120rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, min-content);
+  }
+
+  .highlight {
+    font-size: clamp(5rem, 8vw, 11rem);
+  }
+
+  .t {
+    font-size: clamp(3.5rem, 6vw, 9rem);
+  }
+
+  .t1 {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+  .t2 {
+    grid-column: 3/-1;
+    grid-row: 3/4;
+  }
+
+  .t3 {
+    grid-column: 3/-1;
+    grid-row: 4/5;
+  }
+
+  .t4 {
+    grid-column: 5/-1;
+    grid-row: 5/6;
+  }
+
+  .t5 {
+    grid-column: 3/6;
+    grid-row: 6/7;
+  }
+
+  .t6 {
+    grid-column: 3/4;
+    grid-row: 7/8;
+  }
+
+  .t7 {
+    grid-column: 4/6;
+    grid-row: 7/8;
+  }
+
+  .t8 {
+    grid-column: 4/6;
+    grid-row: 9/10;
+  }
+
+  .t9 {
+    grid-column: 4/6;
+    grid-row: 10/11;
+  }
+
+  .art1 {
+    grid-column: 1/3;
+    grid-row: 3/7;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .art2 {
+    grid-column: 6/-1;
+    grid-row: 6/10;
+    width: 118%;
+    transform: translateX(5%);
+  }
+
+  .art3 {
+    grid-column: 1/4;
+    grid-row: 7/11;
+    width: 80%;
+  }
 }

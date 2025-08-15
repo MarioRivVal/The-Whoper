@@ -1,4 +1,6 @@
 .header {
+  max-width: 180rem;
+  margin: 0 auto;
   background-image: url("/images/frame-1.png");
   background-size: cover;
   background-repeat: no-repeat;
