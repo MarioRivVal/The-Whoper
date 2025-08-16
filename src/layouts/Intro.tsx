@@ -26,20 +26,20 @@ export default function Intro() {
 
         {/* Ilustraciones */}
         <ResponsiveImage
-          name="intro/img-1"
+          name="comics/img-1"
           ext="png"
           alt="Viñeta de Mujer peliroja sobre un camello"
           className={`${s.art} ${s.art1}`}
         />
 
         <ResponsiveImage
-          name="intro/img-2"
+          name="comics/img-2"
           ext="png"
           alt="Viñeta de autoretrato de Felix el 'Whoper' con uniforme de enfermero"
           className={`${s.art} ${s.art2}`}
         />
         <ResponsiveImage
-          name="intro/img-3"
+          name="comics/img-3"
           ext="png"
           alt="Viñeta de personaje inspirado a Obelix"
           className={`${s.art} ${s.art3}`}

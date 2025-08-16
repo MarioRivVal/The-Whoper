@@ -30,8 +30,9 @@
   line-height: 1;
   letter-spacing: 0.3rem;
   color: var(--violet-dark);
-  text-shadow: -2px -2px 0 var(--yellow-light), 2px -2px 0 var(--yellow-light),
-    -2px 2px 0 var(--yellow-light), 2px 2px 0 var(--yellow-light);
+  text-shadow: -0.2rem -0.2rem 0 var(--yellow-light),
+    0.2rem -0.2rem 0 var(--yellow-light), -0.2rem 0.2rem 0 var(--yellow-light),
+    0.2rem 0.2rem 0 var(--yellow-light);
 }
 
 .mountainImg {
@@ -52,6 +53,8 @@
   width: 100%;
   padding: 0 2rem;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -81,6 +84,8 @@
   .string {
     width: 80%;
     max-width: 60rem;
+    flex-direction: row;
+    gap: 0;
   }
 }
 @media (min-width: 1024px) {

@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 180rem;
+  margin: -10rem auto 0 auto;
+  background-image: url("/images/frame-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.imgComics {
+  position: absolute;
+  width: 30%;
+  max-width: 28rem;
+  top: 40%;
+  right: 0;
+}

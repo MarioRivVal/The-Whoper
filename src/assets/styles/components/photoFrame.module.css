@@ -1,0 +1,29 @@
+.container {
+  padding: 10rem 0;
+}
+
+.frame {
+  position: relative;
+  width: 70%;
+  margin: 6rem 0;
+  transform: rotate(-6deg);
+}
+
+.artistImg {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .frame {
+    margin: 10rem 0 12rem 0;
+    width: 50%;
+    max-width: 60rem;
+  }
+}
+
+/* @media (min-width: 1280px) {
+  .frame {
+    width: 50%;
+    max-width: 80rem;
+  }
+} */

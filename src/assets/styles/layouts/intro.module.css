@@ -4,7 +4,6 @@
   position: relative;
   padding: 12rem 2rem;
   background-image: var(--bg-img);
-  /* background-size: cover; */
   background-repeat: no-repeat;
   background-color: var(--violet-light);
   background-position: 20% 80%;
