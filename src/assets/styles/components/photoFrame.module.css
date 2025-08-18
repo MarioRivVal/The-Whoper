@@ -5,7 +5,7 @@
 .frame {
   position: relative;
   width: 70%;
-  margin: 6rem 0;
+  margin: 10% 0;
   transform: rotate(-6deg);
 }
 
@@ -15,8 +15,8 @@
 
 @media (min-width: 768px) {
   .frame {
-    margin: 10rem 0 12rem 0;
-    width: 50%;
+    margin: 8% 0 9% 0;
+    width: 40%;
     max-width: 60rem;
   }
 }

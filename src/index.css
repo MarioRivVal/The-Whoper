@@ -50,6 +50,26 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  width: 60%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* picture img:hover {
+  transform: scale(1.5);
+} */
+
+.u--violet-text {
+  color: var(--violet-light);
+  font-family: var(--font-primary);
+  font-size: 4rem;
+}
+
+.u--strong-text {
+  font-family: var(--font-seconday);
+}
+
 @media (min-width: 480px) {
   /* sm: móviles grandes */
 }
@@ -62,7 +82,7 @@ a {
 
 @media (min-width: 1024px) {
   html {
-    font-size: 75%; /* 12px */
+    font-size: 75%;
   }
 }
 
