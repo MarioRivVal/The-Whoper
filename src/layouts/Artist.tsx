@@ -5,7 +5,7 @@ import ResponsiveImage from "../components/ResponsiveImage";
 export default function Artist() {
   return (
     <>
-      <div className={s.container}>
+      <div id="#artist" className={s.container}>
         <PhotoFrame />
         <ResponsiveImage
           name="comics/img-4"

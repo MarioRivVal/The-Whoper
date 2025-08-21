@@ -1,6 +1,7 @@
 import Header from "./layouts/Header";
 import Intro from "./layouts/Intro";
 import Artist from "./layouts/Artist";
+import Services from "./layouts/Services";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Intro />
       <Artist />
+      <Services />
     </>
   );
 }
