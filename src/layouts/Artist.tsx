@@ -21,10 +21,10 @@ export default function Artist() {
           alt="Vineta original de una gafas de sol"
           className={s.sunGlassesImg}
         />
-        <h2>
+        <h3>
           <span className="u--violet-text">M</span>uchos me conocen como <br />
           <span className="u--strong-text"> El Whoper</span>
-        </h2>
+        </h3>
         <div className={s.paragraphs}>
           <p>
             Desde siempre me sentí atraído por el lenguaje del cómic. Me gusta

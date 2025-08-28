@@ -2,15 +2,15 @@
   position: relative;
   max-width: 200rem;
   display: flex;
-  margin: -6rem auto 0 auto;
-  background-image: url("/images/frame-mobile-2.png");
+  background-image: url("/images/frame-2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
+  margin: -5rem auto 0 auto;
 }
 
 .titleBox {
-  margin: 8rem 0;
+  margin: 12rem auto 16rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,4 +24,40 @@
   margin-bottom: 2rem;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.iconBox {
+  position: absolute;
+}
+.iconBox svg {
+  width: 10rem;
+  height: 10rem;
+}
+
+.content {
+  max-width: 200rem;
+  margin: -10rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 10rem 2rem;
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-color: var(--blue-light);
+  background-position: 20% 80%;
+  z-index: -1;
+}
+
+.slider {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    margin: -5rem auto 0 auto;
+  }
 }

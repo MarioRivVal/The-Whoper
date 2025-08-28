@@ -51,6 +51,11 @@ a {
 }
 
 h2 {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+}
+
+h3 {
   width: 60%;
   font-size: 3rem;
   text-align: center;

@@ -1,0 +1,40 @@
+.card {
+  width: 36rem;
+  height: 48rem;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card1 {
+  background-image: url("../../../../images/cards/blue.png");
+}
+.card2 {
+  background-image: url("../../../../images/cards/orange.png");
+}
+.card3 {
+  background-image: url("../../../../images/cards/yellow.png");
+}
+.card4 {
+  background-image: url("../../../../images/cards/violet.png");
+}
+.card5 {
+  background-image: url("../../../../images/cards/red.png");
+}
+.card6 {
+  background-image: url("../../../../public/images/cards/pink.png");
+}
+
+.card p {
+  font-size: 1.6rem;
+}
+
+.capitalLetter {
+  color: var(--violet-light);
+  font-size: 2.6rem;
+}

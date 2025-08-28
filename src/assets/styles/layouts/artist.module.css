@@ -7,9 +7,9 @@
   justify-content: center;
   margin: -10rem auto 0 auto;
   background-image: url("/images/frame-2.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 .imgComics {
@@ -22,7 +22,7 @@
 
 .content {
   max-width: 200rem;
-  margin: 0 auto;
+  margin: -10rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,6 @@
   background-color: var(--green-light);
   background-position: 20% 80%;
   z-index: -1;
-  margin-top: -8rem;
 }
 
 .paragraphs p {
@@ -53,7 +52,8 @@
 
 @media (min-width: 768px) {
   .content {
-    padding: 10rem 4rem;
+    padding: 14rem 4rem;
+    margin: -12rem 0 0 0;
   }
   .sunGlassesImg {
     width: 30%;
@@ -64,9 +64,13 @@
 }
 
 @media (min-width: 1024px) {
-  .content {
-    padding: 10rem 6rem;
+  .container {
+    margin: -15rem auto 0 auto;
+    background-repeat: repeat-x;
   }
+  /* .content {
+    padding: 10rem 6rem;
+  } */
 
   .paragraphs {
     width: 80%;
@@ -78,4 +82,9 @@
   .heartImg {
     width: 20%;
   }
+}
+
+@media (min-width: 1280px) {
+  /* .container {
+  } */
 }
