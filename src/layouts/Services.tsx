@@ -141,7 +141,9 @@ export default function Services() {
           {cards.map((item, idx) => (
             <div
               key={item.id}
-              ref={(el) => (itemRefs.current[idx] = el)}
+              ref={(el) => {
+                itemRefs.current[idx] = el;
+              }}
               className={s.item}
             >
               <ColoredCard item={item} />
