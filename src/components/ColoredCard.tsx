@@ -7,7 +7,7 @@ type CardProps = {
   description: string;
 };
 
-export default function ColoredCard({ item }) {
+export default function ColoredCard({ item }: { item: CardProps }) {
   return (
     <div className={`${s.card} ${s[`card${item.id}`]}`}>
       <h2>

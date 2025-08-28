@@ -1,16 +1,23 @@
 .card {
-  width: 36rem;
-  height: 48rem;
+  /* antes era absolute; lo quitamos para que el wrapper .item controle la posición */
+  position: relative;
+  left: auto;
+  top: auto;
 
+  width: 20rem;
+  height: 32rem;
   padding: 2rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .card1 {
   background-image: url("../../../../images/cards/blue.png");
 }
@@ -27,7 +34,7 @@
   background-image: url("../../../../images/cards/red.png");
 }
 .card6 {
-  background-image: url("../../../../public/images/cards/pink.png");
+  background-image: url("../../../../images/cards/green.png");
 }
 
 .card p {

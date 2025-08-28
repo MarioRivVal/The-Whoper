@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 10vw; /* deja aire lateral */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.card {
+  flex: 0 0 70vw; /* tamaño base móvil */
+  max-width: 36rem; /* igual que tu .card */
+  height: 48rem;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  border-radius: 2rem;
+  transform-origin: bottom center; /* “apoyadas” abajo */
+  transition: transform 120ms ease, filter 120ms ease;
+  will-change: transform, filter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* escritorio: más estrechas para que quepan varias */
+@media (min-width: 768px) {
+  .card {
+    flex-basis: 28rem;
+  }
+}
