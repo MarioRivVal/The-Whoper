@@ -2,57 +2,10 @@ import s from "../assets/styles/layouts/services.module.css";
 import { useEffect, useRef, useState } from "react";
 import PlusOneIcon from "../assets/icons/PlusOne";
 import ColoredCard from "../components/ColoredCard";
-
-type Card = {
-  id: number;
-  letter: string;
-  title: string;
-  description: string;
-};
+import ResponsiveImage from "../components/ResponsiveImage";
+import { servicesCards as cards } from "../db/servicesCards";
 
 export default function Services() {
-  const cards: Card[] = [
-    {
-      id: 1,
-      letter: "V",
-      title: "iñeta simple",
-      description: "Una sola escena con humor o mensaje personalizado.",
-    },
-    {
-      id: 2,
-      letter: "T",
-      title: "ira cómica",
-      description: "Una pequeña historia contada en varias viñetas.",
-    },
-    {
-      id: 3,
-      letter: "C",
-      title: "arteles ilustrados",
-      description: "Diseño de póster para eventos, carreras o celebraciones.",
-    },
-    {
-      id: 4,
-      letter: "V",
-      title: "iñetas premio",
-      description:
-        "Viñetas como trofeo, detalle o reconocimiento conmemorativo.",
-    },
-    {
-      id: 5,
-      letter: "G",
-      title: "ran formato",
-      description:
-        "Ilustraciones de gran tamaño para exposiciones o presentaciones.",
-    },
-    {
-      id: 6,
-      letter: "I",
-      title: "nfografías",
-      description:
-        "Visualización de información o procesos con estilo cómico y claro.",
-    },
-  ];
-
   const [active, setActive] = useState(
     Math.min(3, Math.max(0, cards.length - 1))
   );
@@ -199,6 +152,12 @@ export default function Services() {
       </div>
 
       <section className={s.content}>
+        <ResponsiveImage
+          name="comics/pencil"
+          className={s.pencilImg}
+          alt="Lápiz dibujando"
+          ext="png"
+        />
         <div className={s.slider} ref={sliderRef}>
           {cards.map((item, idx) => (
             <div
@@ -211,14 +170,6 @@ export default function Services() {
               <ColoredCard item={item} />
             </div>
           ))}
-        </div>
-        <div className={s.controls}>
-          <button onClick={prev} aria-label="Anterior">
-            anterior
-          </button>
-          <button onClick={next} aria-label="Siguiente">
-            siguiente
-          </button>
         </div>
       </section>
     </>

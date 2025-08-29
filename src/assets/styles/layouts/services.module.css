@@ -52,10 +52,16 @@
 .slider {
   position: relative;
   height: 40rem;
-  overscroll-behavior-x: contain; /* no encadenar al body */
   touch-action: pan-y;
-
   cursor: grab;
+}
+
+.pencilImg {
+  position: absolute;
+  width: 15rem;
+  height: auto;
+  transform: translate(2.5rem, -3.5rem);
+  z-index: 2000;
 }
 
 .dragging {
@@ -67,9 +73,6 @@
   /* Durante el drag bloqueamos cualquier pan del navegador */
   touch-action: none;
 }
-/* .item, .item * {
-  -webkit-user-drag: none;
-} */
 
 .item {
   position: absolute;
@@ -79,13 +82,6 @@
   transform-origin: center center;
   transition: transform 220ms ease;
   will-change: transform;
-}
-
-.controls {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {

@@ -4,10 +4,11 @@
   top: auto;
   width: 23rem;
   height: 32rem;
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
   justify-content: center;
   background-size: contain;
   background-position: center;
@@ -33,11 +34,25 @@
   background-image: url("../../../../images/cards/green.png");
 }
 
+.iconBox {
+  position: relative;
+}
+
+.iconBox svg {
+  position: absolute;
+  top: -5.4rem;
+  left: -3.4rem;
+  width: 6rem;
+  height: auto;
+  transform: rotate(-116deg);
+}
+
 .card p {
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .capitalLetter {
   color: var(--violet-light);
-  font-size: 2.6rem;
+  font-size: 3.2rem;
 }

@@ -1,4 +1,5 @@
 import s from "../assets/styles/components/coloredCard.module.css";
+import ArrowLine from "../assets/icons/ArrowLine";
 
 type CardProps = {
   id: number;
@@ -14,6 +15,9 @@ export default function ColoredCard({ item }: { item: CardProps }) {
         <span className={s.capitalLetter}>{item.letter}</span>
         {item.title}
       </h2>
+      <div className={s.iconBox}>
+        <ArrowLine />
+      </div>
       <p>{item.description}</p>
     </div>
   );
