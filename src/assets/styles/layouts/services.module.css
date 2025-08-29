@@ -36,25 +36,34 @@
 
 .content {
   max-width: 200rem;
-  margin: -10rem 0 0 0;
+  margin: -12rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding: 10rem 0;
+  padding: 0 0 10rem 0;
   background-image: var(--bg-img);
   background-repeat: no-repeat;
   background-color: var(--blue-light);
-  background-position: 20% 80%;
-  z-index: -1;
+  background-position: 40% 60%;
+  overflow: hidden;
 }
 
 .slider {
   position: relative;
-  width: 100%;
   height: 40rem;
-  overflow: hidden;
-  isolation: isolate;
+
+  cursor: grab;
+}
+
+.dragging {
+  cursor: grabbing;
+  -webkit-user-select: none; /* iOS */
+  user-select: none;
+}
+.locking {
+  /* Durante el drag bloqueamos cualquier pan del navegador */
+  touch-action: none;
 }
 
 .item {
@@ -63,7 +72,7 @@
   left: 50%;
   transform: translate(-50%, -50%); /* el JS añade el resto */
   transform-origin: center center;
-  transition: transform 300ms ease;
+  transition: transform 220ms ease;
   will-change: transform;
 }
 
