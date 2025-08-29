@@ -68,7 +68,7 @@ export default function Services() {
   const clamp = (n: number, a: number, b: number) =>
     Math.max(a, Math.min(b, n));
 
-  const loadShow = (dragOffset = 0) => {
+  const loadShow = () => {
     const items = itemRefs.current.filter(
       (el): el is HTMLDivElement => el !== null
     );
@@ -80,24 +80,25 @@ export default function Services() {
     for (let i = 0; i < items.length; i++) {
       const d = i - a;
       const abs = Math.abs(d);
-      const x = BASE_SHIFT * d + dragOffset;
+      const x = BASE_SHIFT * d;
       const scale = clamp(CENTER_SCALE - SCALE_STEP * abs, 0.82, CENTER_SCALE);
       const rot =
         d === 0 ? 0 : clamp(MAX_TILT - abs * 2, 2, MAX_TILT) * (d < 0 ? 1 : -1);
 
       items[i].style.transform = `
-      translate(-50%, -50%)
-      translateX(${x}px)
-      scale(${scale})
-      rotate(${rot}deg)
-    `;
-      items[i].style.zIndex = String(BASE_Z - abs); // siempre positivo
+        translate(-50%, -50%)
+        translateX(${x}px)
+        scale(${scale})
+        rotate(${rot}deg)
+      `;
+      // siempre positivo; redondeado para evitar valores decimales
+      items[i].style.zIndex = String(BASE_Z - Math.round(abs * 10));
     }
   };
 
   useEffect(() => {
-    loadShow(0);
-    const onResize = () => loadShow(0);
+    loadShow();
+    const onResize = () => loadShow();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -106,7 +107,7 @@ export default function Services() {
   const next = () => setActive((i) => (i + 1 < cards.length ? i + 1 : i));
   const prev = () => setActive((i) => (i - 1 >= 0 ? i - 1 : i));
 
-  // ----- Drag / Swipe (desktop y móvil) -----
+  // ----- Swipe (Android/desktop friendly): decide prev/next al soltar -----
   useEffect(() => {
     const el = sliderRef.current;
     if (!el) return;
@@ -115,57 +116,68 @@ export default function Services() {
     let down = false;
     let startX = 0;
     let startY = 0;
-    let pointerId = 0;
+    let dx = 0;
+    let dy = 0;
+    let horiz = false;
+    let pid = 0;
 
     const controller = new AbortController();
     const { signal } = controller;
 
-    const onDown = (e: PointerEvent) => {
-      if (e.pointerType === "mouse" && e.button !== 0) return;
+    const onDown = (e: PointerEvent): void => {
+      if (e.pointerType === "mouse" && e.button !== 0) return; // solo botón izq en mouse
       down = true;
       startX = e.clientX;
       startY = e.clientY;
-      pointerId = e.pointerId;
-      el.setPointerCapture(pointerId);
+      dx = 0;
+      dy = 0;
+      horiz = false;
+      pid = e.pointerId;
+      el.setPointerCapture(pid);
       el.classList.add(s.dragging);
     };
 
-    const onMove = (e: PointerEvent) => {
+    const onMove = (e: PointerEvent): void => {
       if (!down) return;
-      // bloqueo de eje: si el gesto es más vertical que horizontal, dejamos al navegador hacer scroll
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
-      if (Math.abs(dx) > Math.abs(dy)) {
-        // gesto horizontal: evitamos selección rara
-        window.getSelection?.()?.removeAllRanges();
+
+      dx = e.clientX - startX;
+      dy = e.clientY - startY;
+
+      // bloqueo de eje: cuando es mayormente horizontal, bloqueamos pan nativo
+      if (!horiz && Math.abs(dx) > Math.abs(dy) + 6) {
+        horiz = true;
+        el.classList.add(s.locking); // activa touch-action:none mediante CSS
       }
+
+      // En Android real, evitar que el navegador se quede el gesto
+      if (horiz && e.cancelable) e.preventDefault();
+
+      // evita selección de texto mientras arrastras
+      window.getSelection?.()?.removeAllRanges();
     };
 
-    const onUp = (e: PointerEvent) => {
+    const onUp = (): void => {
       if (!down) return;
-      el.classList.remove(s.dragging);
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
+      el.classList.remove(s.dragging, s.locking);
 
-      // Solo si el gesto fue principalmente horizontal y pasó el umbral
-      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > THRESH) {
+      if (horiz && Math.abs(dx) > THRESH) {
         if (dx < 0) next();
         else prev();
       }
+
       down = false;
+      horiz = false;
     };
 
-    el.addEventListener("pointerdown", onDown, { passive: true, signal });
-    el.addEventListener("pointermove", onMove, { passive: true, signal });
+    // IMPORTANTE: pointermove/keydown con passive:false para poder preventDefault
+    el.addEventListener("pointerdown", onDown, { passive: false, signal });
+    el.addEventListener("pointermove", onMove, { passive: false, signal });
     window.addEventListener("pointerup", onUp, { passive: true, signal });
     window.addEventListener("pointercancel", onUp, { passive: true, signal });
     window.addEventListener("pointerleave", onUp, { passive: true, signal });
 
-    return () => {
-      controller.abort();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return () => controller.abort();
+  }, [next, prev]); // next/prev son estables (setters funcionales)
 
   return (
     <>
@@ -200,15 +212,14 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        {/* <div className={s.controls}>
+        <div className={s.controls}>
           <button onClick={prev} aria-label="Anterior">
             anterior
           </button>
           <button onClick={next} aria-label="Siguiente">
             siguiente
           </button>
-        </div> */}
+        </div>
       </section>
     </>
   );

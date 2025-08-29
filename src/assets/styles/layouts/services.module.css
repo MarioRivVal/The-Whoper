@@ -52,6 +52,8 @@
 .slider {
   position: relative;
   height: 40rem;
+  overscroll-behavior-x: contain; /* no encadenar al body */
+  touch-action: pan-y;
 
   cursor: grab;
 }
@@ -65,6 +67,9 @@
   /* Durante el drag bloqueamos cualquier pan del navegador */
   touch-action: none;
 }
+/* .item, .item * {
+  -webkit-user-drag: none;
+} */
 
 .item {
   position: absolute;
