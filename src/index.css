@@ -39,6 +39,13 @@ body {
   font-family: var(--font-primary);
   background-color: var(--violet);
 }
+picture {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
 
 img {
   width: 100%;
@@ -75,24 +82,31 @@ h3 {
   font-family: var(--font-seconday);
 }
 
+.u--paragraph {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 @media (min-width: 480px) {
   /* sm: móviles grandes */
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 68.75%; /* ≈11px */
-  }
+  /* html {
+    font-size: 68.75%; 
+  } */
 }
 
 @media (min-width: 1024px) {
-  html {
+  /* html {
     font-size: 75%;
-  }
+  } */
 }
 
 @media (min-width: 1280px) {
-  html {
+  /* html {
     font-size: 80%;
-  }
+  } */
 }

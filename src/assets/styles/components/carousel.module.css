@@ -1,0 +1,39 @@
+.root {
+  width: 100%;
+  height: 100%; /* la altura la define el contenedor padre */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: contain;
+  touch-action: pan-y; /* vertical permitido */
+  cursor: grab;
+  isolation: isolate;
+}
+
+.dragging {
+  cursor: grabbing;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.locking {
+  touch-action: none; /* se activa sólo durante swipe horizontal */
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* el JS añade el resto */
+  transform-origin: center center;
+  transition: transform 220ms ease; /* snap suave al cambiar active */
+  will-change: transform;
+}
+
+.item,
+.item * {
+  -webkit-user-drag: none; /* evita arrastrar imágenes en mobile */
+}

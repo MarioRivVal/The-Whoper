@@ -1,0 +1,177 @@
+.card {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8rem 2rem 2rem 2rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card1 {
+  background-image: url("/images/cards/l-yellow.png");
+  transform: rotate(4deg);
+}
+.card2 {
+  background-image: url("/images/cards/l-blue.png");
+  transform: rotate(-1deg);
+}
+.card3 {
+  background-image: url("/images/cards/l-pink.png");
+  transform: rotate(3deg);
+}
+
+.card1,
+.card3 {
+  align-self: flex-end;
+}
+.card1 .ideaImg,
+.card2 .ideaImg,
+.card3 .ideaImg {
+  position: absolute;
+  height: auto;
+}
+
+.card1 .ideaImg {
+  top: 0;
+  left: -4rem;
+  width: 22rem;
+}
+.card2 .ideaImg {
+  top: 1rem;
+  right: -5rem;
+  width: 25rem;
+}
+.card3 .ideaImg {
+  top: 4rem;
+  left: -6rem;
+  width: 22rem;
+}
+
+.strip {
+  position: absolute; /* tú lo moverás */
+  top: 2.4rem;
+  left: -3.5rem;
+  right: -3.5rem; /* para que estire de lado a lado */
+  overflow: hidden;
+  border-top: 2px solid var(--red-dark); /* rojo */
+  border-bottom: 2px solid var(--red-dark);
+}
+
+.card1 .strip {
+  transform: rotate(-2deg);
+}
+.card2 .strip {
+  transform: rotate(3deg);
+}
+.card3 .strip {
+  transform: rotate(-3deg);
+}
+
+/* pista con dos filas gemelas dentro */
+.track {
+  display: flex;
+  width: max-content; /* ancho según contenido */
+  will-change: transform;
+  animation: marquee var(--speed, 18s) linear infinite;
+}
+
+/* cada mitad (idénticas) */
+.row {
+  display: inline-flex;
+  gap: 2.4rem;
+  padding: 0.6rem 0;
+}
+
+/* texto y separador */
+.chunk {
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--violet-dark);
+}
+.chunk::after {
+  content: " •";
+  margin-left: 2.4rem;
+}
+
+.card:hover .track {
+  animation-play-state: paused;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.reverse .list {
+  align-items: flex-start;
+}
+.card.reverse {
+  justify-content: flex-start;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.icon {
+  width: 2rem;
+  height: auto;
+}
+
+/* animación: mueve la pista la mitad de su propio ancho */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 370px) {
+  .card {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 8rem 4rem 4rem 4rem;
+  }
+
+  .card1 .ideaImg {
+    top: -4rem;
+    left: -4rem;
+    width: 34rem;
+  }
+  .card2 .ideaImg {
+    top: -8rem;
+    right: -7rem;
+    width: 38rem;
+  }
+  .card3 .ideaImg {
+    top: -4rem;
+    left: -6rem;
+    width: 34rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 80%;
+    height: 28rem;
+    padding: 8rem 6rem 6rem 6rem;
+  }
+}

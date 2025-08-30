@@ -1,11 +1,11 @@
-type Card = {
+export type CardProps = {
   id: number;
   letter: string;
   title: string;
   description: string;
 };
 
-export const servicesCards: Card[] = [
+export const servicesCards: CardProps[] = [
   {
     id: 4,
     letter: "V",
@@ -13,17 +13,17 @@ export const servicesCards: Card[] = [
     description: "Viñetas como trofeo, detalle o reconocimiento conmemorativo.",
   },
   {
-    id: 1,
-    letter: "V",
-    title: "iñeta simple",
-    description: "Una sola escena con humor o mensaje personalizado.",
-  },
-  {
     id: 6,
     letter: "I",
     title: "nfografías",
     description:
       "Visualización de información o procesos con estilo cómico y claro.",
+  },
+  {
+    id: 1,
+    letter: "V",
+    title: "iñeta simple",
+    description: "Una sola escena con humor o mensaje personalizado.",
   },
   {
     id: 2,
