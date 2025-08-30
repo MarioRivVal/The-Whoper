@@ -1,8 +1,13 @@
 import s from "../assets/styles/components/lightCard.module.css";
 import ResponsiveImage from "./ResponsiveImage";
 import CheckIcon from "../assets/icons/check";
+import type { CardProps } from "../db/ideasCards";
 
-export default function LightCard({ item }) {
+type LightCardProps = {
+  item: CardProps;
+};
+
+export default function LightCard({ item }: LightCardProps) {
   return (
     <div
       className={`${s.card} ${s[`card${item.id}`]} ${
