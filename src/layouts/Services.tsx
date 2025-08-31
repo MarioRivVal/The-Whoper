@@ -1,4 +1,5 @@
 import s from "../assets/styles/layouts/services.module.css";
+import b from "../assets/styles/components/button.module.css";
 import PlusOneIcon from "../assets/icons/PlusOne";
 import ColoredCard from "../components/ColoredCard";
 import ResponsiveImage from "../components/ResponsiveImage";
@@ -6,28 +7,27 @@ import { servicesCards as cards } from "../db/servicesCards";
 import useCarousel from "../hooks/useCarousel";
 import LightCard from "../components/ligthCard";
 import { ideasCards } from "../db/ideasCards";
+import Button from "../components/Button";
+import TitleSection from "../components/TitleSection";
 
 export default function Services() {
   const { sliderRef, itemRefs } = useCarousel(cards.length);
 
   return (
     <>
-      <div id="#services" className={s.container}>
-        <div className={s.titleBox}>
-          <h3>
+      <TitleSection
+        id="services"
+        title={
+          <>
             <span className="u--violet-text">Q</span>ue puedo
             <span className="u--strong-text"> hacer</span> por ti
-          </h3>
-          <p className="u--paragraph">
-            Desde siempre me sentí atraído por el lenguaje del cómic. Me gusta
+          </>
+        }
+        subtitle="Desde siempre me sentí atraído por el lenguaje del cómic. Me gusta
             mirar la vida con sentido del humor y dibujarla con un trazo
-            directo, irónico y muy humano.
-          </p>
-          <div className={s.iconBox}>
-            <PlusOneIcon />
-          </div>
-        </div>
-      </div>
+            directo, irónico y muy humano."
+        icon={<PlusOneIcon />}
+      />
 
       <section className={s.content}>
         <ResponsiveImage
@@ -68,6 +68,7 @@ export default function Services() {
             <LightCard key={item.id} item={item} />
           ))}
         </div>
+        <Button url="#" text="Encarga una viñeta" className={b.violetBtn} />
       </section>
     </>
   );

@@ -2,6 +2,7 @@ import Header from "./layouts/Header";
 import Intro from "./layouts/Intro";
 import Artist from "./layouts/Artist";
 import Services from "./layouts/Services";
+import Process from "./layouts/Process";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Intro />
       <Artist />
       <Services />
+      <Process />
     </>
   );
 }

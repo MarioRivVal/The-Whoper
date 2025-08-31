@@ -59,3 +59,8 @@
   border: solid 0.2rem var(--green-dark);
   background-color: var(--green-light);
 }
+
+.violetBtn {
+  border: solid 0.2rem var(--green-dark);
+  background-color: var(--violet-light);
+}
