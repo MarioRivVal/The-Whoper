@@ -1,0 +1,92 @@
+.cardBox {
+  display: flex;
+  align-items: center;
+  transform: rotate(3deg);
+}
+
+.cardBox.greenCard {
+  transform: rotate(-4deg);
+}
+
+.titleCard,
+.descCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titleCard {
+  position: relative;
+  height: 64vw;
+  max-width: 30rem;
+  max-height: 43rem;
+  padding: 4%;
+  background-image: url("../../../../images/cards/yellow.png");
+  z-index: 1;
+}
+
+.descCard {
+  height: 55vw;
+  max-width: 30rem;
+  max-height: 36rem;
+  padding: 6%;
+  transform: translateX(-12%) rotate(4deg);
+  background-image: url("../../../../images/cards/violet.png");
+  transition: all 0.3s ease;
+}
+
+.cardBox:hover .descCard {
+  transform: translateX(-4%) rotate(6deg);
+}
+
+.greenCard .titleCard {
+  background-image: url("../../../../images/cards/green.png");
+  order: 2;
+}
+
+.greenCard .descCard {
+  transform: translateX(12%) rotate(4deg);
+}
+
+.descCard p {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--white);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.6rem, 5vw, 4rem);
+}
+
+.title span {
+  font-size: clamp(4rem, 5vw, 6rem);
+}
+
+.numberIcon svg {
+  position: absolute;
+  top: -20%;
+  left: 26%;
+  width: 42%;
+  height: auto;
+}
+
+.iconBox svg {
+  position: absolute;
+  bottom: 12%;
+  left: 36%;
+  transform: rotate(-108deg);
+  width: 32%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    margin-top: 14rem;
+  }
+}

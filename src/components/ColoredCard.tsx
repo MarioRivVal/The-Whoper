@@ -12,7 +12,7 @@ export default function ColoredCard({ item }: { item: CardProps }) {
   return (
     <div className={`${s.card} ${s[`card${item.id}`]}`}>
       <h2>
-        <span className={s.capitalLetter}>{item.letter}</span>
+        <span className="u--violet-letter">{item.letter}</span>
         {item.title}
       </h2>
       <div className={s.iconBox}>

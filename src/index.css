@@ -60,6 +60,7 @@ a {
 h2 {
   font-size: 2.5rem;
   font-family: var(--font-primary);
+  text-align: center;
 }
 
 h3 {
@@ -71,6 +72,11 @@ h3 {
 /* picture img:hover {
   transform: scale(1.5);
 } */
+
+.u--violet-letter {
+  color: var(--violet-light);
+  font-size: 3.2rem;
+}
 
 .u--violet-text {
   color: var(--violet-light);

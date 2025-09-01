@@ -5,6 +5,8 @@ import PauseIcon from "../assets/icons/PauseIcon";
 import PlayIcon from "../assets/icons/PlayIcon";
 import TitleSection from "../components/TitleSection";
 import ResponsiveImage from "../components/ResponsiveImage";
+import ProcessCard from "../components/ProcessCard";
+import { processCards } from "../db/processCards";
 
 export default function Process() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -95,9 +97,21 @@ export default function Process() {
               aria-label={isPlaying ? "Pausar vídeo" : "Reproducir vídeo"}
             >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
-              {/* <span>{isPlaying ? "Pause" : "Play"}</span> */}
+              <span>{isPlaying ? "Pause" : "Play"}</span>
             </button>
           </div>
+        </div>
+
+        <div className={s.grid}>
+          {processCards.map((item) => (
+            <ProcessCard
+              id={item.id}
+              letter={item.letter}
+              title={item.title}
+              description={item.description}
+              color={item.color}
+            />
+          ))}
         </div>
       </section>
     </>
