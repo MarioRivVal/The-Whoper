@@ -20,21 +20,9 @@
   right: 0;
 }
 
-.content {
-  max-width: 200rem;
-  margin: -10rem auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  padding: 10rem 2rem;
-  background-image: var(--bg-img);
-  background-repeat: no-repeat;
-  background-color: var(--green-light);
-  background-position: 20% 80%;
-  z-index: -1;
+.paragraphs {
+  padding: 0 2rem;
 }
-
 .paragraphs p {
   font-size: 2rem;
   text-align: center;
@@ -45,15 +33,20 @@
 
 .sunGlassesImg {
   width: 50%;
+  margin-top: 14rem;
 }
 .heartImg {
   width: 65%;
 }
 
 @media (min-width: 768px) {
-  .content {
+  /* .content {
     padding: 14rem 4rem;
     margin: -12rem auto 0 auto;
+  } */
+
+  .paragraphs {
+    padding: 0 4rem;
   }
   .sunGlassesImg {
     width: 30%;
@@ -68,9 +61,6 @@
     margin: -15rem auto 0 auto;
     background-repeat: repeat-x;
   }
-  /* .content {
-    padding: 10rem 6rem;
-  } */
 
   .paragraphs {
     width: 80%;

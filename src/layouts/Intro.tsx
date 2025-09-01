@@ -4,7 +4,7 @@ import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Intro() {
   return (
-    <main className={s.main}>
+    <main className="u--content-box u--content-box--violet">
       <div className={s.grid}>
         <h1 className={s.title1}>
           <span className={`${s.t} ${s.t1}`}>Tú me</span>

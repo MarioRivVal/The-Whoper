@@ -1,23 +1,69 @@
-.content {
-  max-width: 200rem;
-  /* margin: -12rem auto 0 auto; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  padding: 0 0 10rem 0;
-  background-image: var(--bg-img);
-  background-repeat: no-repeat;
-  background-color: var(--blue-light);
-  background-position: 40% 60%;
-  overflow: hidden;
+.videoBox {
+  max-width: 60rem;
+  position: relative;
+  width: 90%;
+  display: grid;
+  gap: 12px;
+  padding: 0.5rem 1rem 1rem 1rem;
+  background-color: #fff;
+  margin-top: 10%;
+  transform: rotate(-4deg);
 }
+
 .video {
+  position: relative;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+}
+
+.videoEl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tapeImg {
+  width: 40%;
+  position: absolute;
+  top: -13%;
+  left: 27%;
+  transform: rotate(14deg);
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+.videoImg {
+  width: 30%;
   height: auto;
 }
 
-.videoImg {
-  width: 40%;
+.videoIcon {
+  background: none;
+  border: none;
+}
+.videoIcon svg {
+  width: 4rem;
   height: auto;
+}
+
+@media (min-width: 480px) {
+  .videoBox {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .videoBox {
+    width: 70%;
+  }
+}
+@media (min-width: 1280px) {
+  .videoBox {
+    margin-top: 7rem;
+  }
 }

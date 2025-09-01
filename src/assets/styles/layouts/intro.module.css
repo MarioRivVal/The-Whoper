@@ -1,20 +1,9 @@
-.main {
-  max-width: 200rem;
-  margin: 0 auto;
-  position: relative;
-  padding: 12rem 2rem;
-  background-image: var(--bg-img);
-  background-repeat: no-repeat;
-  background-color: var(--violet-light);
-  background-position: 20% 80%;
-  margin-top: -8rem;
-  z-index: -1;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(15, min-content);
+  margin-top: 15rem;
+  padding: 0 2rem;
 }
 .title1 {
   display: contents;
@@ -94,10 +83,16 @@
   grid-row: 11/14;
 }
 
+@media (min-width: 768px) {
+  .grid {
+    padding: 0 4rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .grid {
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 16rem auto 6rem auto;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(12, min-content);
   }

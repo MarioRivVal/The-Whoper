@@ -29,7 +29,7 @@ export default function Services() {
         icon={<PlusOneIcon />}
       />
 
-      <section className={s.content}>
+      <section className="u--content-box u--content-box--blue">
         <ResponsiveImage
           name="comics/pencil"
           className={s.pencilImg}

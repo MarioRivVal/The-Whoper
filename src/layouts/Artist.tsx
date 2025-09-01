@@ -14,7 +14,7 @@ export default function Artist() {
           className={s.imgComics}
         />
       </div>
-      <section className={s.content}>
+      <section className="u--content-box u--content-box--green">
         <ResponsiveImage
           name="comics/sunglasses"
           ext="png"

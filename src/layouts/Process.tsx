@@ -60,7 +60,7 @@ export default function Process() {
         icon={<PencilIcon />}
       />
 
-      <section className={s.content}>
+      <section className="u--content-box u--content-box--orange">
         <div className={s.videoBox}>
           <div className={s.video}>
             <video
@@ -74,10 +74,16 @@ export default function Process() {
               preload="metadata"
               controls={false}
             />
+            <ResponsiveImage
+              name="utils/tape"
+              ext="png"
+              className={s.tapeImg}
+              alt="Cita adhesiva"
+            />
           </div>
           <div className={s.logos}>
             <ResponsiveImage
-              name="whoper"
+              name="utils/whoper"
               ext="png"
               alt="Logo escrito 'El Whoper'"
               className={s.videoImg}
@@ -89,7 +95,7 @@ export default function Process() {
               aria-label={isPlaying ? "Pausar vídeo" : "Reproducir vídeo"}
             >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
-              <span>{isPlaying ? "Pause" : "Play"}</span>
+              {/* <span>{isPlaying ? "Pause" : "Play"}</span> */}
             </button>
           </div>
         </div>
