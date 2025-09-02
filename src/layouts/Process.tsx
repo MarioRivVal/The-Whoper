@@ -112,6 +112,24 @@ export default function Process() {
               color={item.color}
             />
           ))}
+          <ResponsiveImage
+            name="comics/run"
+            alt="Viñeta de personaje corriendo"
+            ext="png"
+            className={s.runImg}
+          />
+          <ResponsiveImage
+            name="comics/teacher"
+            alt="Viñeta de personaje corriendo"
+            ext="png"
+            className={s.teacherImg}
+          />
+          <ResponsiveImage
+            name="comics/cactus"
+            alt="Viñeta de personaje corriendo"
+            ext="png"
+            className={s.cactusImg}
+          />
         </div>
       </section>
     </>

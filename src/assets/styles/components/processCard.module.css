@@ -2,10 +2,12 @@
   display: flex;
   align-items: center;
   transform: rotate(3deg);
+  justify-self: flex-start;
 }
 
 .cardBox.greenCard {
   transform: rotate(-4deg);
+  justify-self: flex-end;
 }
 
 .titleCard,
@@ -85,8 +87,8 @@
   height: auto;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    margin-top: 14rem;
+@media (min-width: 1280px) {
+  .cardBox {
+    margin-bottom: -10rem;
   }
 }
