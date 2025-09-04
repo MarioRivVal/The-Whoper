@@ -65,7 +65,7 @@
   padding: 0 2rem;
   gap: 8rem;
   margin-top: 36%;
-  margin-bottom: 20%;
+  margin-bottom: 40%;
 }
 
 /* IMAGES */
@@ -75,6 +75,7 @@
 .cactusImg {
   position: absolute;
   height: auto;
+  max-width: 32rem;
 }
 
 .runImg {
@@ -105,14 +106,17 @@
   }
 
   .runImg {
-    max-width: 32rem;
     width: 36%;
     right: 3%;
     top: -2%;
   }
   .teacherImg {
     width: 32%;
-    max-width: 32rem;
+  }
+
+  .cactusImg {
+    width: 32%;
+    left: 34%;
   }
 }
 
@@ -121,11 +125,18 @@
     padding: 0 4rem;
     gap: 0;
     margin-top: 14rem;
+    margin-bottom: 12%;
   }
 
   .teacherImg {
     bottom: 26%;
     left: 9%;
+  }
+
+  .cactusImg {
+    bottom: 2%;
+    left: initial;
+    right: 3%;
   }
 }
 @media (min-width: 1280px) {
@@ -139,5 +150,10 @@
   .teacherImg {
     bottom: 20%;
     left: 26%;
+  }
+
+  .cactusImg {
+    bottom: -10%;
+    right: 20%;
   }
 }

@@ -114,11 +114,11 @@ h3 {
 }
 .u--content-box--orange {
   background-color: var(--orange-light);
-  background-position: 40% 60%;
+  background-position: 180% 150%;
 }
 .u--content-box--blue {
   background-color: var(--blue-light);
-  background-position: 20% 80%;
+  background-position: 10% 40%;
 }
 .u--content-box--green {
   background-color: var(--green-light);

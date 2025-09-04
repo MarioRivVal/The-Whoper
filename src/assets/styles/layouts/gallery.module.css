@@ -1,0 +1,67 @@
+.slidersBox {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  height: 30rem;
+  touch-action: pan-y;
+  cursor: grab;
+  z-index: 0;
+}
+
+.dragging {
+  cursor: grabbing;
+  -webkit-user-select: none; /* iOS */
+  user-select: none;
+}
+.locking {
+  touch-action: none;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* el JS añade el resto */
+  transform-origin: center center;
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+
+.galleryImg img {
+  width: 28rem;
+  height: auto;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.headImg,
+.liquidImg,
+.nocillaImg {
+  position: absolute;
+  height: auto;
+}
+
+.headImg {
+  width: 57%;
+  top: 17%;
+  left: 6%;
+}
+.liquidImg {
+}
+.nocillaImg {
+}
+
+@media (min-width: 768px) {
+  /* .slider {
+  height: 30rem;
+ 
+}
+.galleryImg img {
+  width: 28rem;
+ 
+} */
+}

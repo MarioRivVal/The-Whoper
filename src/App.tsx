@@ -3,6 +3,7 @@ import Intro from "./layouts/Intro";
 import Artist from "./layouts/Artist";
 import Services from "./layouts/Services";
 import Process from "./layouts/Process";
+import Gallery from "./layouts/Gallery";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Artist />
       <Services />
       <Process />
+      <Gallery />
     </>
   );
 }

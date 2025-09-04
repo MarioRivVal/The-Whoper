@@ -1,4 +1,5 @@
 import s from "../assets/styles/layouts/process.module.css";
+import b from "../assets/styles/components/button.module.css";
 import { useEffect, useRef, useState } from "react";
 import PencilIcon from "../assets/icons/PencilIcon";
 import PauseIcon from "../assets/icons/PauseIcon";
@@ -7,6 +8,7 @@ import TitleSection from "../components/TitleSection";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ProcessCard from "../components/ProcessCard";
 import { processCards } from "../db/processCards";
+import Button from "../components/Button";
 
 export default function Process() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -131,6 +133,8 @@ export default function Process() {
             className={s.cactusImg}
           />
         </div>
+
+        <Button text="Regala tu viñeta" url="#" className={b.greenBtn} />
       </section>
     </>
   );
