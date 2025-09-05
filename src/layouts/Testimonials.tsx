@@ -2,6 +2,7 @@ import s from "../assets/styles/layouts/testimonials.module.css";
 import TitleSection from "../components/TitleSection";
 import MegaphoneIcon from "../assets/icons/MegaphoneIcon";
 import { testimonials } from "../db/testimonials";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Testimonials() {
   return (
@@ -33,7 +34,7 @@ export default function Testimonials() {
               </figcaption>
             </figure>
           ))}
-          {/* <ResponsiveImage
+          <ResponsiveImage
             name="comics/peanut"
             alt="Viñeta de cacahuete"
             ext="png"
@@ -45,12 +46,13 @@ export default function Testimonials() {
             ext="png"
             className={s.sirImg}
           />
+
           <ResponsiveImage
             name="comics/magician"
             alt="Viñeta de Mago vagabundo"
             ext="png"
             className={s.magicianImg}
-          /> */}
+          />
         </div>
       </section>
     </>

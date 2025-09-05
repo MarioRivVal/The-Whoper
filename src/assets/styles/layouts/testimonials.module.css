@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 5rem;
+  margin-bottom: 15rem;
   justify-items: center;
 }
 
@@ -48,11 +49,11 @@
 }
 
 .testimonial p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 .testimonial span {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-family: var(--font-seconday);
 }
 .peanutImg,
@@ -69,14 +70,14 @@
   right: 5%;
 }
 .sirImg {
-  width: 20%;
-  top: 20%;
-  left: 0;
+  width: 18rem;
+  top: 50%;
+  left: 5%;
 }
 .magicianImg {
-  width: 20%;
-  bottom: 0;
-  right: 0;
+  width: 29rem;
+  bottom: -18%;
+  right: 20%;
 }
 
 @media (min-width: 500px) {
@@ -95,5 +96,55 @@
   .testimonial2,
   .testimonial4 {
     justify-self: flex-end;
+  }
+
+  .peanutImg {
+    width: 16rem;
+    top: 8%;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .peanutImg {
+    width: 22rem;
+    top: 3%;
+    right: -4%;
+  }
+
+  .sirImg {
+    width: 26rem;
+    left: -5%;
+  }
+
+  .magicianImg {
+    width: 34rem;
+    bottom: -24%;
+    right: 32%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    margin-top: 10rem;
+  }
+  .testimonial {
+    margin-top: -8rem;
+  }
+  .peanutImg {
+    top: -9%;
+  }
+
+  .sirImg {
+    width: 36rem;
+    left: 4%;
+    top: 60%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .peanutImg {
+    width: 26rem;
+    right: 16%;
   }
 }
