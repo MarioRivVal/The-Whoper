@@ -2,7 +2,6 @@ import s from "../assets/styles/layouts/testimonials.module.css";
 import TitleSection from "../components/TitleSection";
 import MegaphoneIcon from "../assets/icons/MegaphoneIcon";
 import { testimonials } from "../db/testimonials";
-import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Testimonials() {
   return (
