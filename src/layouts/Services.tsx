@@ -1,18 +1,19 @@
 import s from "../assets/styles/layouts/services.module.css";
 import b from "../assets/styles/components/button.module.css";
+import sl from "../assets/styles/components/slider.module.css";
 import PlusOneIcon from "../assets/icons/PlusOne";
 import ColoredCard from "../components/ColoredCard";
 import ResponsiveImage from "../components/ResponsiveImage";
-import { servicesCards as cards } from "../db/servicesCards";
-import useCarousel from "../hooks/useCarousel";
+import { servicesCards } from "../db/servicesCards";
 import LightCard from "../components/ligthCard";
 import { ideasCards } from "../db/ideasCards";
 import Button from "../components/Button";
 import TitleSection from "../components/TitleSection";
 
-export default function Services() {
-  const { sliderRef, itemRefs } = useCarousel(cards.length);
+import useCarousel from "../hooks/useCarousel";
 
+export default function Services() {
+  const { sliderRef, itemRefs } = useCarousel(servicesCards.length);
   return (
     <>
       <TitleSection
@@ -36,14 +37,15 @@ export default function Services() {
           alt="Lápiz dibujando"
           ext="png"
         />
-        <div className={s.slider} ref={sliderRef}>
-          {cards.map((item, idx) => (
+        {/* SLIDER */}
+        <div className={`${sl.slider} ${sl.sliderServices}`} ref={sliderRef}>
+          {servicesCards.map((item, idx) => (
             <div
               key={item.id}
               ref={(el) => {
                 itemRefs.current[idx] = el;
               }}
-              className={s.item}
+              className={sl.item}
             >
               <ColoredCard item={item} />
             </div>

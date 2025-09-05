@@ -51,3 +51,9 @@
   font-size: 1.6rem;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .card {
+    width: 27rem;
+    height: 36rem;
+  }
+}

@@ -1,10 +1,12 @@
 import s from "../assets/styles/layouts/gallery.module.css";
 import b from "../assets/styles/components/button.module.css";
+import sl from "../assets/styles/components/slider.module.css";
 import TitleSection from "../components/TitleSection";
 import CrowIcon from "../assets/icons/CrowIcon";
 import useCarousel from "../hooks/useCarousel";
 import ResponsiveImage from "../components/ResponsiveImage";
 import Button from "../components/Button";
+import FollowIcon from "../assets/icons/FollowIcon";
 
 export default function Gallery() {
   const group1 = [1, 2, 3, 4, 5, 6, 7];
@@ -34,14 +36,17 @@ export default function Gallery() {
       <section className="u--content-box u--content-box--violet">
         <div className={s.slidersBox}>
           {/* GROUP 1 */}
-          <div className={s.slider} ref={ref1.sliderRef}>
+          <div
+            className={`${sl.slider} ${sl.sliderGallery}`}
+            ref={ref1.sliderRef}
+          >
             {group1.map((idx) => (
               <div
                 key={idx}
                 ref={(el) => {
                   ref1.itemRefs.current[idx] = el;
                 }}
-                className={s.item}
+                className={sl.item}
               >
                 <ResponsiveImage
                   name={`gallery/img-${idx}`}
@@ -53,14 +58,17 @@ export default function Gallery() {
             ))}
           </div>
           {/* GROUP 2 */}
-          <div className={s.slider} ref={ref2.sliderRef}>
+          <div
+            className={`${sl.slider} ${sl.sliderGallery}`}
+            ref={ref2.sliderRef}
+          >
             {group2.map((idx) => (
               <div
                 key={idx}
                 ref={(el) => {
                   ref2.itemRefs.current[idx] = el;
                 }}
-                className={s.item}
+                className={sl.item}
               >
                 <ResponsiveImage
                   name={`gallery/img-${idx}`}
@@ -72,14 +80,17 @@ export default function Gallery() {
             ))}
           </div>
           {/* GROUP 3 */}
-          <div className={s.slider} ref={ref3.sliderRef}>
+          <div
+            className={`${sl.slider} ${sl.sliderGallery}`}
+            ref={ref3.sliderRef}
+          >
             {group3.map((idx) => (
               <div
                 key={idx}
                 ref={(el) => {
                   ref3.itemRefs.current[idx] = el;
                 }}
-                className={s.item}
+                className={sl.item}
               >
                 <ResponsiveImage
                   name={`gallery/img-${idx}`}
@@ -91,14 +102,17 @@ export default function Gallery() {
             ))}
           </div>
           {/* GROUP 4 */}
-          <div className={s.slider} ref={ref4.sliderRef}>
+          <div
+            className={`${sl.slider} ${sl.sliderGallery}`}
+            ref={ref4.sliderRef}
+          >
             {group4.map((idx) => (
               <div
                 key={idx}
                 ref={(el) => {
                   ref4.itemRefs.current[idx] = el;
                 }}
-                className={s.item}
+                className={sl.item}
               >
                 <ResponsiveImage
                   name={`gallery/img-${idx}`}
@@ -110,11 +124,16 @@ export default function Gallery() {
             ))}
           </div>
 
-          <Button
-            text="Muchas más en Instagram"
-            url="#"
-            className={b.greenBtn}
-          />
+          <div className={s.btnGroup}>
+            <Button
+              text="Muchas más en Instagram"
+              url="#"
+              className={b.greenBtn}
+            />
+            <div className={s.iconBox}>
+              <FollowIcon />
+            </div>
+          </div>
 
           <ResponsiveImage
             name="comics/head"

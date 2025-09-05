@@ -4,6 +4,7 @@ import Artist from "./layouts/Artist";
 import Services from "./layouts/Services";
 import Process from "./layouts/Process";
 import Gallery from "./layouts/Gallery";
+import Testimonials from "./layouts/Testimonials";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Services />
       <Process />
       <Gallery />
+      <Testimonials />
     </>
   );
 }
