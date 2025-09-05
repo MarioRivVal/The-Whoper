@@ -121,6 +121,9 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.item span {
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -165,6 +168,16 @@
     top: -4rem;
     left: -6rem;
     width: 34rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .item span {
+    font-size: 2.2rem;
+  }
+
+  .chunk {
+    font-size: 2rem;
   }
 }
 
