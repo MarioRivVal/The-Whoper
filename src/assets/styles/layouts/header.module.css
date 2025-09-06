@@ -22,6 +22,10 @@
   position: relative;
 }
 
+.titleBox h2 {
+  text-align: start;
+}
+
 .title {
   position: relative;
   display: flex;

@@ -1,0 +1,43 @@
+.ctaBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnsBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  margin-top: 8rem;
+}
+
+.felixImg {
+  width: 30%;
+  height: auto;
+}
+
+.whatsIcon,
+.instaIcon {
+  position: absolute;
+  left: 2rem;
+}
+.whatsIcon {
+  top: -5rem;
+}
+.instaIcon {
+  top: 7rem;
+}
+.btnsBox svg {
+  width: 5rem;
+  height: auto;
+}
+
+.inkImg {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: -16rem;
+  right: 0;
+}

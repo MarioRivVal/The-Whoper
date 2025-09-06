@@ -1,13 +1,18 @@
 import s from "../assets/styles/components/photoFrame.module.css";
 import ResponsiveImage from "./ResponsiveImage";
 
-export default function PhotoFrame() {
+type PhotoFrameProps = {
+  img: string;
+  alt: string;
+};
+
+export default function PhotoFrame({ img, alt }: PhotoFrameProps) {
   return (
     <div className={s.frame}>
       <ResponsiveImage
-        name="artist/felix-1"
+        name={`artist/${img}`}
         ext="png"
-        alt="Fotografia de Felix caminando  tomada de frente a una pared artistica"
+        alt={alt}
         className={s.artistImg}
       />
     </div>

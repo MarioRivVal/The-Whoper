@@ -12,7 +12,7 @@ export default function Fqa() {
   return (
     <>
       <TitleSection
-        id="gallery"
+        id="fqa"
         title={
           <>
             <span className="u--violet-text">¿T</span>ienes dudas? Aqui estan

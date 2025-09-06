@@ -6,6 +6,7 @@ import Process from "./layouts/Process";
 import Gallery from "./layouts/Gallery";
 import Testimonials from "./layouts/Testimonials";
 import Fqa from "./layouts/Fqa";
+import Cta from "./layouts/Cta";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Gallery />
       <Testimonials />
       <Fqa />
+      <Cta />
     </>
   );
 }

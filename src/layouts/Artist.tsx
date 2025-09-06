@@ -6,7 +6,10 @@ export default function Artist() {
   return (
     <>
       <div id="#artist" className={s.container}>
-        <PhotoFrame />
+        <PhotoFrame
+          img="felix-1"
+          alt="Fotografia de Felix caminando  tomada de frente a una pared artistica"
+        />
         <ResponsiveImage
           name="comics/img-4"
           ext="png"
