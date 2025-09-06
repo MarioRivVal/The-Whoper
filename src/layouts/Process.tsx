@@ -107,6 +107,7 @@ export default function Process() {
         <div className={s.grid}>
           {processCards.map((item) => (
             <ProcessCard
+              key={item.id}
               id={item.id}
               letter={item.letter}
               title={item.title}

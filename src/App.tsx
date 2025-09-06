@@ -5,6 +5,7 @@ import Services from "./layouts/Services";
 import Process from "./layouts/Process";
 import Gallery from "./layouts/Gallery";
 import Testimonials from "./layouts/Testimonials";
+import Fqa from "./layouts/Fqa";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Process />
       <Gallery />
       <Testimonials />
+      <Fqa />
     </>
   );
 }

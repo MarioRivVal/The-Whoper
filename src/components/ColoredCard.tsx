@@ -8,9 +8,19 @@ type CardProps = {
   description: string;
 };
 
-export default function ColoredCard({ item }: { item: CardProps }) {
+export default function ColoredCard({
+  item,
+  type,
+}: {
+  item: CardProps;
+  type?: string;
+}) {
   return (
-    <div className={`${s.card} ${s[`card${item.id}`]}`}>
+    <div
+      className={`${s.card} ${s[`card${item.id}`]} ${
+        type === "large" ? s.large : ""
+      }`}
+    >
       <h2>
         <span className="u--violet-letter">{item.letter}</span>
         {item.title}

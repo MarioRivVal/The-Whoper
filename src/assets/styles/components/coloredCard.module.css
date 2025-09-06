@@ -10,9 +10,13 @@
   align-items: center;
   gap: 2rem;
   justify-content: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.card.large {
+  width: 30rem;
 }
 
 .card1 {
@@ -54,6 +58,10 @@
 @media (min-width: 1024px) {
   .card {
     width: 27rem;
+    height: 36rem;
+  }
+  .card.large {
+    width: 34rem;
     height: 36rem;
   }
 }
