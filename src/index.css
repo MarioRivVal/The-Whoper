@@ -88,6 +88,10 @@ h3 {
   font-family: var(--font-seconday);
 }
 
+.u--red-text {
+  color: var(--red-dark);
+}
+
 .u--paragraph {
   font-size: 2.2rem;
   text-align: center;

@@ -1,0 +1,44 @@
+.footer {
+  max-width: 200rem;
+  background-image: url("/images/frame-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: -8rem auto 0 auto;
+  padding-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.logoImg {
+  width: 60%;
+  max-width: 35rem;
+  height: auto;
+  margin-top: 10%;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright p {
+  font-size: 1.6rem;
+}
+
+.copyright a:hover {
+  color: var(--green-light);
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

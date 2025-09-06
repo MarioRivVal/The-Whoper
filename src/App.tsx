@@ -7,6 +7,7 @@ import Gallery from "./layouts/Gallery";
 import Testimonials from "./layouts/Testimonials";
 import Fqa from "./layouts/Fqa";
 import Cta from "./layouts/Cta";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Testimonials />
       <Fqa />
       <Cta />
+      <Footer />
     </>
   );
 }
