@@ -1,6 +1,5 @@
 import s from "../assets/styles/layouts/header.module.css";
 import b from "../assets/styles/components/button.module.css";
-import Navigation from "../components/Navigation";
 import ResponsiveImage from "../components/ResponsiveImage";
 import Button from "../components/Button";
 import CheckIcon from "../assets/icons/check";
@@ -8,7 +7,6 @@ import CheckIcon from "../assets/icons/check";
 export default function Header() {
   return (
     <header className={s.header}>
-      <Navigation />
       <div className={s.container}>
         <div className={s.titleBox}>
           <ResponsiveImage
@@ -29,7 +27,11 @@ export default function Header() {
             className={s.deerImg}
           />
         </div>
-        <Button url="#" text="Escríbeme" className={b.greenBtn} />
+        <Button
+          url="https://wa.me/+34636105689"
+          text="Escríbeme"
+          className={b.greenBtn}
+        />
         <ul className={s.string}>
           <li className={s.stringItem}>
             <CheckIcon className={s.stringIcon} />

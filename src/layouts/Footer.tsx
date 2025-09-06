@@ -20,8 +20,13 @@ export default function Footer() {
             </a>
           </p>
           <p>
-            Creado con proposito y respeto por{" "}
-            <a className="u--red-text" href="#">
+            Diseño original y desarrollo por{" "}
+            <a
+              className="u--red-text"
+              href="https://www.netneo.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               netneo
             </a>
           </p>

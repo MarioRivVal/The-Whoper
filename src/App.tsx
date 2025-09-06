@@ -8,10 +8,12 @@ import Testimonials from "./layouts/Testimonials";
 import Fqa from "./layouts/Fqa";
 import Cta from "./layouts/Cta";
 import Footer from "./layouts/Footer";
+import Navigation from "./layouts/Navigation";
 
 function App() {
   return (
     <>
+      <Navigation />
       <Header />
       <Intro />
       <Artist />

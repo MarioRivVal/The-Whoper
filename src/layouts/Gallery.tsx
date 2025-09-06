@@ -126,8 +126,8 @@ export default function Gallery() {
 
           <div className={s.btnGroup}>
             <Button
+              url="https://www.instagram.com/el_whoper/"
               text="Muchas más en Instagram"
-              url="#"
               className={b.greenBtn}
             />
             <div className={s.iconBox}>

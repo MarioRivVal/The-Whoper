@@ -70,7 +70,11 @@ export default function Services() {
             <LightCard key={item.id} item={item} />
           ))}
         </div>
-        <Button url="#" text="Encarga una viñeta" className={b.violetBtn} />
+        <Button
+          url="https://wa.me/+34636105689"
+          text="Encarga una viñeta"
+          className={b.violetBtn}
+        />
       </section>
     </>
   );

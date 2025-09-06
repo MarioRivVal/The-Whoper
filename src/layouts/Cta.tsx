@@ -15,7 +15,7 @@ export default function Cta() {
         id="contact"
         title={
           <>
-            <span className="u--violet-text">H</span>ablemos y creo tu las
+            <span className="u--violet-text">H</span>ablemos y creo tu
             <span className="u--strong-text"> viñeta</span>
           </>
         }
@@ -23,14 +23,25 @@ export default function Cta() {
         icon={<RocketIcon />}
       />
       <section className="u--content-box u--content-box--orange">
-        <PhotoFrame
-          img="felix-2"
-          alt="Felix inspirado y creando un boceto enun bar"
-        />
+        <div className={s.frameBox}>
+          <PhotoFrame
+            img="felix-2"
+            alt="Felix inspirado y creando un boceto enun bar"
+          />
+        </div>
+
         <div className={s.ctaBox}>
           <div className={s.btnsBox}>
-            <Button text="Whatsapp" url="#" className={b.greenBtn} />
-            <Button text="Instagram" url="#" className={b.violetBtn} />
+            <Button
+              text="Whatsapp"
+              url="https://wa.me/+34636105689"
+              className={b.greenBtn}
+            />
+            <Button
+              text="Instagram"
+              url="https://www.instagram.com/el_whoper/"
+              className={b.violetBtn}
+            />
             <div className={s.whatsIcon}>
               <WhatsIcon />
             </div>

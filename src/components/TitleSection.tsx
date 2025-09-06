@@ -15,7 +15,7 @@ export default function TitleSection({
   icon,
 }: SectionTitleProps) {
   return (
-    <div id={`#${id}`} className={s.container}>
+    <div id={id} className={s.container}>
       <div className={s.titleBox}>
         <h3>{title}</h3>
         <p className="u--paragraph">{subtitle}</p>

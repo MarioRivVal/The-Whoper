@@ -135,7 +135,11 @@ export default function Process() {
           />
         </div>
 
-        <Button text="Regala tu viñeta" url="#" className={b.greenBtn} />
+        <Button
+          text="Regala tu viñeta"
+          url="https://wa.me/+34636105689"
+          className={b.greenBtn}
+        />
       </section>
     </>
   );

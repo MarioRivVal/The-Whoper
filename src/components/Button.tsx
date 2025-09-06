@@ -6,7 +6,12 @@ export default function Button({ url, text, className }: Button) {
   return (
     <div className={s.container}>
       <span className={s.wrap}>
-        <a href={url} className={`${s.btn} ${className}`}>
+        <a
+          href={url}
+          className={`${s.btn} ${className}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {text}
         </a>
       </span>

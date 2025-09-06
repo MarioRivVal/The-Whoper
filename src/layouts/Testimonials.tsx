@@ -8,7 +8,7 @@ export default function Testimonials() {
   return (
     <>
       <TitleSection
-        id="gallery"
+        id="testimonials"
         title={
           <>
             <span className="u--violet-text">O</span>piniones de quién lo ha
