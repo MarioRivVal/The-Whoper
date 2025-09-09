@@ -41,7 +41,6 @@ export const servicesCards: CardProps[] = [
     id: 5,
     letter: "G",
     title: "ran formato",
-    description:
-      "Ilustraciones de gran tamaño para exposiciones o presentaciones.",
+    description: "Grandes historias o ilustraciones con muchos personajes",
   },
 ];

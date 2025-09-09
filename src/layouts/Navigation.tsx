@@ -12,7 +12,9 @@ export default function Navigation() {
     if (target.tagName === "A") {
       const id = target.getAttribute("href");
       if (id) {
-        document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
       }
     }
     setIsNavActive(false);

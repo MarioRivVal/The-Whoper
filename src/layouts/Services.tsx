@@ -24,9 +24,7 @@ export default function Services() {
             <span className="u--strong-text"> hacer</span> por ti
           </>
         }
-        subtitle="Desde siempre me sentí atraído por el lenguaje del cómic. Me gusta
-            mirar la vida con sentido del humor y dibujarla con un trazo
-            directo, irónico y muy humano."
+        subtitle="Elige el formato que mejor encaje con tu historia: desde una viñeta suelta hasta un cartel completo o una tira cómica a medida."
         icon={<PlusOneIcon />}
       />
 

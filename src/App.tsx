@@ -1,3 +1,4 @@
+import ScrollUpButton from "./components/scrollUpButton";
 import Header from "./layouts/Header";
 import Intro from "./layouts/Intro";
 import Artist from "./layouts/Artist";
@@ -24,6 +25,7 @@ function App() {
       <Fqa />
       <Cta />
       <Footer />
+      <ScrollUpButton />
     </>
   );
 }

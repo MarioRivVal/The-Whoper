@@ -24,17 +24,17 @@
 
 .headImg {
   width: 16rem;
-  top: 18%;
+  top: 15%;
   left: 6%;
 }
 .liquidImg {
   width: 12rem;
-  top: 43%;
+  top: 41%;
   right: 6%;
 }
 .nocillaImg {
   width: 14rem;
-  bottom: 24%;
+  bottom: 26%;
   left: 6%;
 }
 
@@ -87,5 +87,6 @@
 
   .nocillaImg {
     width: 29rem;
+    bottom: 22%;
   }
 }

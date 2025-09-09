@@ -14,13 +14,13 @@
 }
 
 .navigationBackground {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   background-color: var(--blue-light);
   position: fixed;
-  top: 5%;
-  right: 6%;
+  top: 6%;
+  right: 7%;
   z-index: 100;
   transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -75,4 +75,17 @@
 .navigationActive .navigationNav {
   width: 100%;
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .navigationButton {
+    width: 6rem;
+    height: 6rem;
+  }
+  .navigationBackground {
+    width: 5rem;
+    height: 5rem;
+    top: 5.5%;
+    right: 6.5%;
+  }
 }

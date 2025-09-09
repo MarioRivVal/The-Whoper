@@ -29,7 +29,7 @@
   max-width: 30rem;
   max-height: 43rem;
   padding: 4%;
-  background-image: url("../../../../images/cards/yellow.png");
+  background-image: url("/images/cards/yellow.png");
   z-index: 1;
 }
 
@@ -39,7 +39,7 @@
   max-height: 36rem;
   padding: 6%;
   transform: translateX(-12%) rotate(4deg);
-  background-image: url("../../../../images/cards/violet.png");
+  background-image: url("/images/cards/violet.png");
   transition: all 0.3s ease;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .greenCard .titleCard {
-  background-image: url("../../../../images/cards/green.png");
+  background-image: url("/images/cards/green.png");
   order: 2;
 }
 

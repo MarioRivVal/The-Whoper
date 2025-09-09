@@ -25,25 +25,25 @@
 }
 .testimonial1 {
   position: relative;
-  background-image: url("../../../../images/bubble/bubble-1.png");
+  background-image: url("/images/bubble/bubble-1.png");
   padding: 6rem;
   transform: rotate(5deg);
   z-index: 1;
 }
 .testimonial2 {
-  background-image: url("../../../../images/bubble/bubble-2.png");
+  background-image: url("/images/bubble/bubble-2.png");
   padding: 6rem;
   transform: rotate(-4deg);
 }
 .testimonial3 {
   position: relative;
-  background-image: url("../../../../images/bubble/bubble-3.png");
+  background-image: url("/images/bubble/bubble-3.png");
   padding: 6rem;
   transform: rotate(9deg);
   z-index: 1;
 }
 .testimonial4 {
-  background-image: url("../../../../images/bubble/bubble-4.png");
+  background-image: url("/images/bubble/bubble-4.png");
   padding: 8rem 7rem 12rem 7rem;
   transform: rotate(3deg);
 }
