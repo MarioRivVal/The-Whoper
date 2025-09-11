@@ -14,7 +14,7 @@ export default function Navigation() {
       if (id) {
         setTimeout(() => {
           document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-        }, 300);
+        }, 500);
       }
     }
     setIsNavActive(false);
@@ -46,7 +46,7 @@ export default function Navigation() {
               href="#services"
               onClick={(e) => handleSmoothScrolling(e)}
             >
-              Quiero mi viñeta!
+            ¡Quiero mi viñeta!
             </a>
           </li>
           <li>
@@ -55,7 +55,7 @@ export default function Navigation() {
               href="#process"
               onClick={(e) => handleSmoothScrolling(e)}
             >
-              Como lo hago
+              Cómo lo hago
             </a>
           </li>
           <li>
@@ -91,7 +91,7 @@ export default function Navigation() {
               href="#contact"
               onClick={(e) => handleSmoothScrolling(e)}
             >
-              Escribéme hoy mismo
+              Escríbeme hoy mismo
             </a>
           </li>
         </ul>

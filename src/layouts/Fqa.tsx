@@ -15,7 +15,7 @@ export default function Fqa() {
         id="fqa"
         title={
           <>
-            <span className="u--violet-text">¿T</span>ienes dudas? Aqui estan
+            <span className="u--violet-text">¿T</span>ienes dudas? Aquí están
             las
             <span className="u--strong-text"> FQA</span>
           </>

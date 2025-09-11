@@ -20,7 +20,7 @@ export default function Services() {
         id="services"
         title={
           <>
-            <span className="u--violet-text">Q</span>ue puedo
+            <span className="u--violet-text">Q</span>ué puedo
             <span className="u--strong-text"> hacer</span> por ti
           </>
         }

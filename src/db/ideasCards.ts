@@ -32,10 +32,10 @@ export const ideasCards: CardProps[] = [
   },
   {
     id: 3,
-    strip: "Divulgacion y formación",
+    strip: "Divulgación y formación",
     img: "doctor",
-    alt: "Viñeta de Feliz como doctor",
-    ideas: ["Educación", "Mensajes sociales", "Proyectos cientificos"],
+    alt: "Viñeta de Felix como doctor",
+    ideas: ["Educación", "Mensajes sociales", "Proyectos científicos"],
     reverse: false,
   },
 ];
