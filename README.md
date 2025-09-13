@@ -22,8 +22,6 @@ strip designer who offers **customized illustrations and panels for clients**.
 The web is **component-based**, responsive, and features a **100% original
 design** created in **Figma** and developed by **NetNeo**.
 
-⚠️ **Note**: This project is **still in progress** and will continue to evolve.
-
 ---
 
 ## ✨ Features (Planned & Implemented)
@@ -49,7 +47,7 @@ design** created in **Figma** and developed by **NetNeo**.
 
 ## 🌐 Live Demo
 
-🔗 Coming soon...
+🔗 [elwhopercomics.es](https://bycarlaherrero.com/)
 
 ---
 
