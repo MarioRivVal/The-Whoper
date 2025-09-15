@@ -1,0 +1,66 @@
+.terms {
+  padding: 1.6rem;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.terms h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.section {
+  margin-top: 1.6rem;
+}
+
+.section h3 {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.section p {
+  margin: 0 0 1rem 0;
+}
+
+.datalist {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.datalist dt {
+  font-weight: 600;
+}
+
+.smallprint {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  .datalist {
+    grid-template-columns: minmax(14rem, 22rem) 1fr;
+    gap: 0.6rem 1.2rem;
+  }
+
+  .datalist dt {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .terms {
+    padding: 2.4rem;
+  }
+  .terms h2 {
+    font-size: 3rem;
+  }
+  .section {
+    margin-top: 2rem;
+  }
+  .section h3 {
+    font-size: 1.8rem;
+  }
+}

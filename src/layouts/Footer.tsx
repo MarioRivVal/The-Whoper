@@ -1,7 +1,14 @@
+import { useState } from "react";
 import s from "../assets/styles/layouts/footer.module.css";
 import ResponsiveImage from "../components/ResponsiveImage";
+import Modal from "../components/Modal";
+import Terms from "./Terms";
 
 export default function Footer() {
+  const [isModalActive, setModalActive] = useState(false); // <-- OK
+
+  const openModal = () => setModalActive(true);
+  const closeModal = () => setModalActive(false);
   return (
     <footer className={s.footer}>
       <div className={s.container}>
@@ -15,7 +22,7 @@ export default function Footer() {
         <div className={s.copyright}>
           <p>
             No todo va a ser reir: aquí el{" "}
-            <a className="u--red-text" href="#">
+            <a className="u--red-text" type="button" onClick={openModal}>
               aviso legal
             </a>
           </p>
@@ -32,6 +39,10 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      <Modal isActive={isModalActive} onClose={closeModal}>
+        <Terms />
+      </Modal>
     </footer>
   );
 }
